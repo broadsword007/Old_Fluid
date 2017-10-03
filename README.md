@@ -1,15 +1,6 @@
 Fluid
 =====
-
-[![ZenHub.io](https://img.shields.io/badge/supercharged%20by-zenhub.io-blue.svg)](https://zenhub.io)
-
-[![License](https://img.shields.io/badge/license-MPL2-blue.svg)](https://www.mozilla.org/en-US/MPL/2.0/)
-[![GitHub release](https://img.shields.io/github/release/lirios/fluid.svg)](https://github.com/lirios/fluid)
-[![Build Status](https://travis-ci.org/lirios/fluid.svg?branch=develop)](https://travis-ci.org/lirios/fluid)
-[![GitHub issues](https://img.shields.io/github/issues/lirios/fluid.svg)](https://github.com/lirios/fluid/issues)
-[![Maintained](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/lirios/fluid/commits/develop)
-
-Fluid is a collection of cross-platform QtQuick components for building fluid and dynamic applications.
+Fluid is a collection of cross-platform QtQuick components for building fluid and dynamic applications. This is an old backup of Fluid. You can find the latest Fluid repo * [here](* [qtbase](http://code.qt.io/cgit/qt/qtbase.git))
 
 ## Dependencies
 
@@ -21,40 +12,9 @@ Qt >= 5.8.0 with at least the following modules is required:
  * [qtgraphicaleffects](http://code.qt.io/cgit/qt/qtgraphicaleffects.git)
  * [qtsvg](http://code.qt.io/cgit/qt/qtsvg.git)
 
-## Build
-
-Qbs is a new build system that is much easier to use compared to qmake or CMake.
-
-If you want to learn more, please read the [Qbs manual](http://doc.qt.io/qbs/index.html),
-especially the [setup guide](http://doc.qt.io/qbs/configuring.html) and how to install artifacts
-from the [installation guide](http://doc.qt.io/qbs/installing-files.html).
-
-Open up `fluid.qbs` with QtCreator, hit build and run to see the demo in action.
-
-Alternatively you can build it yourself from the terminal.
-We strongly advise against manual builds, unless you have previous experience.
-
-From the root of the repository, run:
-
-```sh
-qbs setup-toolchains --type gcc /usr/bin/g++ gcc
-qbs setup-qt /usr/bin/qmake-qt5 qt5
-qbs config profiles.qt5.baseProfile gcc
-qbs -d build profile:qt5
-```
-
-Run the demo with:
-
-```sh
-qbs run --no-build -d build --products Demo
-```
-
 ## System-wide installation
 
 ### Build with QMake
-
-This will be the only build system in the next version, so you are encouraged
-to test it and report any issue.
 
 From the root of the repository, run:
 
@@ -73,32 +33,6 @@ On the `qmake` line, you can specify additional configuration parameters:
 
 Use `make distclean` from inside your `build` directory to clean up.
 You need to do this before rerunning `qmake` with different options.
-
-### Build with CMake
-
-If you decide to build with CMake you will need the following modules installed:
-
- * [CMake >= 3.0](https://cmake.org/)
- * [ECM >= 1.7.0](http://quickgit.kde.org/?p=extra-cmake-modules.git)
-
-This build system is now deprecated and will be removed in the next version.
-
-From the root of the repository, run:
-
-```sh
-mkdir build; cd build
-cmake .. -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
-make
-make install # use sudo if necessary
-```
-
-On the `cmake` line, you can specify additional configuration parameters:
-
- * `-DCMAKE_INSTALL_PREFIX=/path/to/install` (for example, `/opt/liri` or `/usr`)
- * `-DCMAKE_BUILD_TYPE=<build_type>`, where `<build_type>` is one of:
-   * **Debug:** debug build
-   * **Release:** release build
-   * **RelWithDebInfo:** release build with debugging information
 
 ### Notes on installation
 
