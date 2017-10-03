@@ -1,6 +1,6 @@
 Fluid
 =====
-Fluid is a collection of cross-platform QtQuick components for building fluid and dynamic applications. This is an old backup of Fluid. You can find the latest Fluid repo * [here](* [qtbase](http://code.qt.io/cgit/qt/qtbase.git))
+Fluid is a collection of cross-platform QtQuick components for building fluid and dynamic applications. This is an old backup of Fluid. You can find the latest Fluid repo [here](https://github.com/lirios/fluid)
 
 ## Dependencies
 
