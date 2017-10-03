@@ -1,0 +1,8 @@
+load(liri_deployment)
+load(qt_plugin)
+
+CONFIG -= create_cmake
+
+!install_under_qt {
+    target.path = $$LIRI_INSTALL_PLUGINSDIR/$$PLUGIN_TYPE
+}
